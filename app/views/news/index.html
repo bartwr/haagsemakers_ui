@@ -1,0 +1,24 @@
+<div class="loading" ng-show="contentLoading"><i class="fa fa-spinner fa-spin fa-3x"></i></div>
+
+<div class="news index" ng-hide="contentLoading">
+  <div class="container">
+    <div class="col-md-12">
+      <h1>Nieuws</h1>
+    </div>
+
+    <div class="col-md-12 news-listing">
+      <ul class="news-listing">
+        <li class="newsitem" ng-repeat="newsitem in news">
+          <a ui-sref="newsitem({slug:newsitem.slug})">
+            <h3>{{newsitem.title}}</h3>
+            <div class="date">{{newsitem.date | date:'short'}}</div>
+            <div class="tags">
+              <i class="fa fa-tags"></i>
+              <span class="tag" ng-repeat="tag in newsitem.tags">{{tag.title}}</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

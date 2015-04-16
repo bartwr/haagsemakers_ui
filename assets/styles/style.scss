@@ -1,0 +1,51 @@
+/*
+Theme Name: haagsemakers
+Theme URI:
+Author: A van der Pluijm
+Author URI:
+Description: AngularJS WP theme
+Version: 1.0
+*/
+
+.btn-default {
+  color: #333;
+  background-color: transparent;
+  border-color: #222;
+  border-radius: 0;
+  border-width: 2px;
+  padding: 10px 40px;
+}
+
+.square-box{
+  position: relative;
+  width: 50%;
+  /*overflow: hidden;*/
+}
+.square-box:before{
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.square-content{
+  position:  absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+
+.loading {
+  text-align: center;
+  padding: 50px;
+}
+// Component styles are injected through grunt
+// injector
+@import 'mixins';
+@import 'typography';
+@import 'home';
+@import 'pages';
+@import 'article';
+@import 'project';
+@import 'news';
+// endinjector

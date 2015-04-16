@@ -1,0 +1,22 @@
+<div class="loading" ng-show="contentLoading"><i class="fa fa-spinner fa-spin fa-3x"></i></div>
+
+<div class="news view" ng-hide="contentLoading">
+  <div class="container content-area">
+    <div class="titleblock col-md-8">
+        <div class="section-tags">
+            <span class="tag" ng-repeat="section in newsitem.fields.section">{{section}}</span>
+        </div>
+        <h1>{{newsitem.title}}</h1>
+        <h2>{{newsitem.fields.subtitle}}</h2>
+        <div class="tags">
+          <i class="fa fa-tags"></i>
+          <span class="tag" ng-repeat="tag in newsitem.tags">{{tag.title}}</span>
+        </div>
+    </div>
+
+    <div class="content-copy col-md-offset-1 col-md-10">
+        <div ng-bind-html="newsitem.content"></div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,35 @@
+.article {
+    &.view {
+      .header-image {
+        img {
+          width: 100%;
+        }
+      }
+      .titleblock {
+        margin-bottom: 1.5em;
+        h1 {
+
+        }
+        h2 {
+          line-height: 1.25;
+          font-family: 'Freight Text W03', Georgia, serif;
+          font-weight: 400;
+          font-size: 40.7px;
+          word-wrap: break-word;
+          letter-spacing: 0;
+        }
+      }
+      .content-copy {
+        .wp-caption-text {
+          margin-top: 12px;
+          max-width: 500px;
+          font-family: 'Proxima Nova W01', sans-serif;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 1.3;
+          text-align: left;
+          color: #637a80;
+        }
+      }
+    }
+  }

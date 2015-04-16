@@ -1,0 +1,62 @@
+<div class="home">
+  <div class="loading" ng-show="contentLoading"><i class="fa fa-spinner fa-spin fa-3x"></i></div>
+
+  <div class="main-content" ng-hide="contentLoading">
+    <div class="container">
+
+      <div class="row article main-article {{articles[ 0].id}}" ng-show="articles.length>0">
+        <a ui-sref="article({section:articles[ 0].fields.section[0],slug:articles[ 0].slug})">
+          <div class="titleblock col-xs-6">
+            <div class="section-tags">
+              <span class="tag" ng-repeat="section in articles[ 0].fields.section">{{section}}</span>
+            </div>
+            <h1>{{articles[ 0].title}}</h1><span class="author">by {{articles[0].author.name}}</span>
+            <h2>{{articles[ 0].fields.subtitle}}</h2>
+          </div>
+          <div class="image col-xs-6">
+            <img class="img-responsive" ng-src="{{articles[ 0].thumbnail_images.large.url}}"/>
+            </div>
+        </a>
+      </div>
+      <hr/>
+
+      <div class="row article-list" ng-show="articles.length>1">
+        <div class="article col-md-4">
+          <div class="main-image">
+            <img class="img-responsive" ng-src="{{articles[ 0].thumbnail_images.large.url}}"/>
+          </div>
+          <div class="article-content">
+            <div class="section-tags">
+              <span class="tag" ng-repeat="section in articles[ 0].fields.section">{{section}}</span>
+            </div>
+            <h1>{{articles[ 0].title}}</h1>
+            <h2>{{articles[ 0].fields.subtitle}}</h2><span class="author">by {{articles[0].author.name}}</span>
+          </div>
+          <a ui-sref="article({section:articles[ 0].fields.section[0],slug:articles[ 0].slug})">
+
+          </a>
+        </div>
+      </div>
+
+      <div class="row news-listing">
+        <div class="col-md-12"><h2>Laatste nieuws<hw></div>
+        <div class="col-md-12">
+          <ul class="news-listing">
+            <li class="newsitem" ng-repeat="newsitem in news">
+              <a ui-sref="newsitem({slug:newsitem.slug})">
+                <h3>{{newsitem.title}}</h3>
+                <h4 class="date">{{newsitem.date | date:'short'}}</h4>
+                <div class="tags">
+                  <i class="fa fa-tags"></i>
+                  <span class="tag" ng-repeat="tag in newsitem.tags">{{tag.title}}</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-12"><a ui-sref="news">kijk alle nieuws</a></div>
+      </div>
+
+    </div>
+  </div>
+</div>

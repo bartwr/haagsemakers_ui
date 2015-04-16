@@ -1,0 +1,45 @@
+body {
+    font-family: "proxima-nova", sans-serif;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 60.5px;
+    line-height: 1;
+    letter-spacing: -0.0175em;
+}
+
+p, ul, li {
+    font-size: 22px;
+    line-height: 36px;
+    color: #202f33;
+}
+p {
+    margin-bottom: 27px;
+}
+
+
+.section-tags {
+    .tag {
+        display: inline-block;
+        font-family: 'Trade Gothic W01', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 5px 8px 4px;
+        font-size: 16px;
+        line-height: 1;
+        margin-right: 6px;
+        margin-bottom: 6px;
+        letter-spacing: 0;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -html-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border: 1px solid #070c0d;
+        color: #070c0d;
+        background-color: #FFF;
+    }
+}

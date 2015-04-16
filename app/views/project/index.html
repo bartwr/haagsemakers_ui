@@ -1,0 +1,55 @@
+<div class="loading" ng-show="contentLoading"><i class="fa fa-spinner fa-spin fa-3x"></i></div>
+
+<div class="project index" ng-hide="contentLoading">
+  <div class="row">
+    <div class="container">
+      <div class="col-md-12">
+        <h1>Haagse Makers Projecten</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="container">
+    <div class="col-md-12"><h2>Hier zijn we nu mee bezig:</h2></div>
+    <div class="col-md-4 project-block" ng-repeat="project in projects.active">
+      <a ui-sref="project({slug:project.slug})">
+        <div class="featured-image img-responsive">
+          <img ng-src="{{project.attachments[ 0].images.medium.url}}"/>
+          <h2 ng-hide="{{project.attachments[ 0]}}">{{project.title}}</h2>
+        </div>
+
+        <div class="inner">
+          <h2>{{project.title}}</h2>
+          <p class="subtitle">{{project.fields.subtitle}}</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  </div>
+
+<div class="row">
+  <div class="container">
+    <div class="col-md-12"><h2>En hiermee niet (meer):</h2></div>
+    <div class="col-md-4 project-block" ng-repeat="project in projects.other">
+      <a ui-sref="project({slug:project.slug})">
+        <div class="featured-image img-responsive">
+          <img ng-src="{{project.attachments[ 0].images.medium.url}}"/>
+          <h2 ng-hide="{{project.attachments[ 0]}}">{{project.title}}</h2>
+        </div>
+
+        <div class="inner">
+          <h2>{{project.title}}</h2>
+          <p class="subtitle">{{project.fields.subtitle}}</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+
+
+<code><pre>
+  {{projects.active}}
+</pre></code>

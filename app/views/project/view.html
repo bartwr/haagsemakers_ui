@@ -1,0 +1,27 @@
+<div class="loading" ng-show="contentLoading"><i class="fa fa-spinner fa-spin fa-3x"></i></div>
+
+<div class="article view" ng-hide="contentLoading">
+  <div class="row">
+    <div class="header-image img-responsive">
+      <img ng-src="{{headerImage}}"/>
+    </div>
+    <div class="container content-area">
+
+      <div class="titleblock col-md-8">
+        <div class="section-tags">
+          <span class="tag" ng-repeat="section in article.fields.section">{{section}}</span>
+        </div>
+        <h1>{{article.title}}</h1>
+        <h2>{{article.fields.subtitle}}</h2>
+      </div>
+
+      <div class="content-copy col-md-12">
+        <div ng-bind-html="article.content"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <pre>{{article}}</pre>
+  </div>
+</div>

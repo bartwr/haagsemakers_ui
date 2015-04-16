@@ -1,0 +1,14 @@
+<div class="loading" ng-show="contentLoading"><i class="fa fa-spinner fa-spin fa-3x"></i></div>
+
+<div class="article index main-content">
+    <div class="container">
+        <h1>Articles</h1>
+        <p>These are mij articles.</p>
+
+        <ul>
+            <li ng-repeat="project in projects">
+                <a ui-sref="project({slug:project.slug})">{{project.title}}</a>
+            </li>
+        </ul>
+    </div>
+</div>
